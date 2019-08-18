@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="shede333">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Python跨平台GUI开发框架 - shede333 博客</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python\u8de8\u5e73\u53f0GUI\u5f00\u53d1\u6846\u67b6";
+    var mkdocs_page_input_path = "Python\u7b2c\u4e09\u65b9\u5e93/Python\u8de8\u5e73\u53f0GUI\u5f00\u53d1\u6846\u67b6.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> shede333 博客</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">主页</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python第三方库</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Python代码格式化工具/">Python代码格式化工具</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python图像处理/">Python图像处理</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python图表-可视化等/">Python图表 可视化等</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python处理URL的库/">Python处理URL的库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python处理日期相关的库/">Python处理日期相关的库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python对FTP的支持/">Python对FTP的支持</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python开发CLI终端相关的库/">Python开发CLI终端相关的库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python测试框架/">Python测试框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的Email邮件收发库/">Python的Email邮件收发库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的Web开发框架/">Python的Web开发框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的游戏开发框架/">Python的游戏开发框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python硬件开发相关/">Python硬件开发相关</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Python跨平台GUI开发框架</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#kivy">Kivy</a></li>
+    
+
+    <li class="toctree-l3"><a href="#flexx">flexx</a></li>
+    
+
+    <li class="toctree-l3"><a href="#wxpythonwxwidgets">wxPython（wxWidgets）</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pyqt5">PyQt5</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pyside2">PySide2</a></li>
+    
+
+    <li class="toctree-l3"><a href="#tkinter">TkInter</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pygtk">PyGTK</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_1">参考：</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../支持HTML模板的python库/">支持HTML模板的python库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../支持开发Python的IED/">支持开发Python的IED</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../数据分析+科学计算等/">数据分析+科学计算等</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../文档构建工具/">文档构建工具</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">shede333 博客</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Python第三方库 &raquo;</li>
+        
+      
+    
+    <li>Python跨平台GUI开发框架</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/shede333/SWPy3rdLibMKBlog/edit/master/docs/Python第三方库/Python跨平台GUI开发框架.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="kivy">Kivy</h2>
+<p>Kivy是开源Python函式库，用于开发行动应用程序和其它采用自然用户界面的多点触控应用软件。它可以在Android，iOS，Linux，OS X和Windows执行。采用MIT授权条款，Kivy是自由并且开源的软件。<br />
+支持开发移动app；<br />
+Kivy - Open source Python library for rapid development of applications
+that make use of innovative user interfaces, such as multi-touch apps.<br />
+官网：<a href="https://kivy.org/">https://kivy.org/</a><br />
+源码：<a href="https://github.com/kivy/kivy">https://github.com/kivy/kivy</a><br />
+官方文档：<a href="https://kivy.org/docs">https://kivy.org/docs</a><br />
+翻译文档：<a href="https://www.kancloud.cn/gthank/kivydoc">Kivy官方文档中文翻译（基于Kivy1.9.1）</a></p>
+<p><a href="http://www.tuicool.com/articles/zYr6ruR">Kivy 指南——Python 跨平台 GUI 开发框架</a> <br />
+<a href="https://muxuezi.github.io/posts/kivy-perface.html?utm_source=tuicool&amp;utm_medium=referral">Kivy指南</a>  </p>
+<h2 id="flexx">flexx</h2>
+<p>Flexx 是一个纯 Python 工具包，用来创建图形化界面应用程序。其使用 Web 技术进行界面的渲染。你可以用 Flexx 来创建桌面应用，同时也可以导出一个应用到独立的 HTML 文档。因为使用纯 Python 开发，所以 Flexx 是跨平台的。只需要有 Python 和浏览器就可以运行。如果是使用桌面模式运行，推荐使用 Firefox 。<br />
+Flexx is a pure Python toolkit for creating graphical user interfaces (GUI's), that uses web technology for its rendering. Apps are written purely in Python; <br />
+The PScript transpiler generates the necessary JavaScript on the fly.<br />
+文档：<a href="http://flexx.readthedocs.io">http://flexx.readthedocs.io</a>  <br />
+源码：<a href="https://github.com/zoofIO/flexx">https://github.com/zoofIO/flexx</a>   </p>
+<h2 id="wxpythonwxwidgets">wxPython（wxWidgets）</h2>
+<p>wxPython 是 Python 语言的一套优秀的 GUI 图形库，允许 Python 程序员很方便的创建完整的、功能键全的  GUI 用户界面。 wxPython 是作为优秀的跨平台 GUI 库 wxWidgets 的 Python 封装和 Python 模块的方式提供给用户的。<br />
+就如同Python和wxWidgets一样，wxPython也是一款开源软件，并且具有非常优秀的跨平台能力，能够运行在32位windows、绝大多数的Unix或类Unix系统、Macintosh OS X上。 <br />
+官网：<a href="https://www.wxpython.org/">https://www.wxpython.org/</a></p>
+<h2 id="pyqt5">PyQt5</h2>
+<p>PyQt是Qt库的Python版本。PyQt3支持Qt1到Qt3。 PyQt4支持Qt4。它的首次发布也是在1998年，但是当时它叫 PyKDE，因为开始的时候SIP和PyQt没有分开。PyQt是用SIP写的。PyQt 提供 GPL版和商业版。<br />
+官网：<a href="https://www.riverbankcomputing.com/software/pyqt/intro">https://www.riverbankcomputing.com/software/pyqt/intro</a>  </p>
+<h2 id="pyside2">PySide2</h2>
+<p>Qt for Python； 
+Qt库官方做的Python版本； <br />
+官网：<a href="https://wiki.qt.io/Qt_for_Python">https://wiki.qt.io/Qt_for_Python</a></p>
+<h2 id="tkinter">TkInter</h2>
+<p>Python自带的GUI库；
+Tkinter（也叫Tk接口）是Tk图形用户界面工具包标准的Python接口。Tk是一个轻量级的跨平台图形用户界面（GUI）开发工具。Tk和Tkinter可以运行在大多数的Unix平台、Windows、和Macintosh系统。</p>
+<h2 id="pygtk">PyGTK</h2>
+<p>PyGTK让你用Python轻松创建具有图形用户界面的程序.底层的GTK+提供了各式的可视元素和功能,如果需要,你能开发在GNOME桌面系统运行的功能完整的软件.</p>
+<h2 id="_1">参考：</h2>
+<blockquote>
+<p><a href="https://my.oschina.net/editorial-story/blog/1529014">https://my.oschina.net/editorial-story/blog/1529014</a></p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../支持HTML模板的python库/" class="btn btn-neutral float-right" title="支持HTML模板的python库">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Python硬件开发相关/" class="btn btn-neutral" title="Python硬件开发相关"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/shede333/SWPy3rdLibMKBlog/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Python硬件开发相关/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../支持HTML模板的python库/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

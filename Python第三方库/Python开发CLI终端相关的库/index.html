@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="shede333">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Python开发CLI终端相关的库 - shede333 博客</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python\u5f00\u53d1CLI\u7ec8\u7aef\u76f8\u5173\u7684\u5e93";
+    var mkdocs_page_input_path = "Python\u7b2c\u4e09\u65b9\u5e93/Python\u5f00\u53d1CLI\u7ec8\u7aef\u76f8\u5173\u7684\u5e93.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> shede333 博客</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">主页</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python第三方库</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Python代码格式化工具/">Python代码格式化工具</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python图像处理/">Python图像处理</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python图表-可视化等/">Python图表 可视化等</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python处理URL的库/">Python处理URL的库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python处理日期相关的库/">Python处理日期相关的库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python对FTP的支持/">Python对FTP的支持</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Python开发CLI终端相关的库</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#click">click</a></li>
+    
+
+    <li class="toctree-l3"><a href="#click-man">click-man</a></li>
+    
+
+    <li class="toctree-l3"><a href="#python-fire">python fire</a></li>
+    
+
+    <li class="toctree-l3"><a href="#docopt">docopt</a></li>
+    
+
+    <li class="toctree-l3"><a href="#cement">cement</a></li>
+    
+
+    <li class="toctree-l3"><a href="#behold">Behold</a></li>
+    
+
+    <li class="toctree-l3"><a href="#bashplotlib">bashplotlib</a></li>
+    
+
+    <li class="toctree-l3"><a href="#colorama">colorama</a></li>
+    
+
+    <li class="toctree-l3"><a href="#progressbar">progressbar</a></li>
+    
+
+    <li class="toctree-l3"><a href="#prettytable">prettytable</a></li>
+    
+
+    <li class="toctree-l3"><a href="#tqdm">tqdm</a></li>
+    
+
+    <li class="toctree-l3"><a href="#termcolor">termcolor</a></li>
+    
+
+    <li class="toctree-l3"><a href="#terminal_layout">terminal_layout</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pygments">Pygments</a></li>
+    
+
+    <li class="toctree-l3"><a href="#python">Python标准库自带的 命令行参数解释器</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python测试框架/">Python测试框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的Email邮件收发库/">Python的Email邮件收发库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的Web开发框架/">Python的Web开发框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python的游戏开发框架/">Python的游戏开发框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python硬件开发相关/">Python硬件开发相关</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Python跨平台GUI开发框架/">Python跨平台GUI开发框架</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../支持HTML模板的python库/">支持HTML模板的python库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../支持开发Python的IED/">支持开发Python的IED</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../数据分析+科学计算等/">数据分析+科学计算等</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../文档构建工具/">文档构建工具</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">shede333 博客</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Python第三方库 &raquo;</li>
+        
+      
+    
+    <li>Python开发CLI终端相关的库</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/shede333/SWPy3rdLibMKBlog/edit/master/docs/Python第三方库/Python开发CLI终端相关的库.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="click">click</h2>
+<p>很推荐，用Click编写Python命令行工具，pocoo出品(Flask也是这家出品的)，用于命令行接口，类似argparse ；<br />
+Click is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary. It’s the “Command Line Interface Creation Kit”. It’s highly configurable but comes with sensible defaults out of the box.   </p>
+<p>官网：<a href="http://click.pocoo.org/">http://click.pocoo.org/</a></p>
+<h2 id="click-man">click-man</h2>
+<p>为 使用<code>click</code>制作的命令行，生成“man pages”； <br />
+Automate generation of man pages for python <code>click</code> applications;
+Automatic man page installation with setuptools and pip;<br />
+源码：<a href="https://github.com/click-contrib/click-man">https://github.com/click-contrib/click-man</a></p>
+<h2 id="python-fire">python fire</h2>
+<p>一个“牛逼”的 Python 命令行解析库，命令行接口自动生成库。  <br />
+介绍: <a href="http://www.oschina.net/p/python-fire">http://www.oschina.net/p/python-fire</a></p>
+<h2 id="docopt">docopt</h2>
+<p>Pythonic command line arguments parser, that will make you smile
+docopt creates beautiful command-line interfaces<br />
+源码: <a href="https://github.com/docopt/docopt">https://github.com/docopt/docopt</a><br />
+官网：<a href="http://docopt.org/">http://docopt.org/</a>    </p>
+<h2 id="cement">cement</h2>
+<p>A Framework, for the CLI Ninja.<br />
+Building backend tools, and command line applications shouldn't be a tedious task. Cement provides a light-weight and fully featured foundation to build anything from single file scripts to complex and intricately designed applications. Out of the box, your application has built-in support for configuration files, command line arguments, logging, daemonization, plugins, output rendered from template (such as Mustache, or Genshi), caching, hooks, signal handling, and so much more.<br />
+一个框架，CLI忍者。<br />
+构建后端工具和命令行应用程序不应该是一个乏味的任务。水泥提供了一个轻量级的、功能齐全的基础，从单一的文件脚本到复杂而复杂的设计应用程序。从这个框中，您的应用程序内置了对配置文件、命令行参数、日志记录、daemoni化、插件、从模板(例如Mustache或Genshi)、缓存、钩子、信号处理等的支持。<br />
+CLI: Command Line Interface,命令行接口/界面<br />
+官网：<a href="http://builtoncement.com/">http://builtoncement.com/</a><br />
+源码：<a href="https://github.com/datafolklabs/cement/">https://github.com/datafolklabs/cement/</a>  </p>
+<h2 id="behold">Behold</h2>
+<p>一款强大的支持 print-style 的调试工具。<br />
+Behold 提供了一个用于通过 print 语句进行上下文调试的工具包。 它允许对输出施加统一的外观，对结果进行标记，以便可以通过搜索或过滤器对其进行排序。并且跨模块提供上下文，以便可以在另一个模块中正确调试来自某个模块的函数。Behold 可以处理许多常见的 Python 特定场景，如 printing 对象的内部字典、揭露嵌套的属性、存储和重用结果、在调试过程中的其他点进行比较等等。</p>
+<h2 id="bashplotlib">bashplotlib</h2>
+<p>一个终端的绘图库，它允许你使用stdin绘制柱状图和散点图等。 </p>
+<h2 id="colorama">colorama</h2>
+<p>Cross-platform colored terminal text. <br />
+<a href="https://pypi.python.org/pypi/colorama/">https://pypi.python.org/pypi/colorama/</a></p>
+<h2 id="progressbar">progressbar</h2>
+<p>console输出进度条</p>
+<h2 id="prettytable">prettytable</h2>
+<p>Python通过prettytable模块将输出内容如表格方式整齐输出;<br />
+主要用于在终端或浏览器端构建很好的输出。  </p>
+<h2 id="tqdm">tqdm</h2>
+<p>显示下载进度的，github源码；<br />
+A fast, extensible progress bar for Python and CLI;<br />
+<a href="https://pypi.python.org/pypi/tqdm">https://pypi.python.org/pypi/tqdm</a></p>
+<h2 id="termcolor">termcolor</h2>
+<p>终端的颜色控制</p>
+<h2 id="terminal_layout">terminal_layout</h2>
+<p>一个命令行ui布局工具 
+<a href="https://gitee.com/gojuukaze/terminal_layout">https://gitee.com/gojuukaze/terminal_layout</a></p>
+<h2 id="pygments">Pygments</h2>
+<p>代码高亮<br />
+官网：<a href="http://pygments.org/">http://pygments.org/</a></p>
+<h2 id="python">Python标准库自带的 命令行参数解释器</h2>
+<ul>
+<li>docopt</li>
+<li>getopt</li>
+<li>argparse</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Python测试框架/" class="btn btn-neutral float-right" title="Python测试框架">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Python对FTP的支持/" class="btn btn-neutral" title="Python对FTP的支持"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/shede333/SWPy3rdLibMKBlog/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Python对FTP的支持/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Python测试框架/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
