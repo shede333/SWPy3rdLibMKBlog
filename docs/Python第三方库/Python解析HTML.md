@@ -1,9 +1,9 @@
 
 ## Beautiful Soup
-解析xml，html，很推荐；  
-官网：<https://www.crummy.com/software/BeautifulSoup/>
-官方文档（英文）：<https://www.crummy.com/software/BeautifulSoup/bs4/doc/>
-中文文档：<http://beautifulsoup.readthedocs.io/zh_CN/latest/>
+解析xml，html，很推荐；    
+官网：<https://www.crummy.com/software/BeautifulSoup/>  
+官方文档（英文）：<https://www.crummy.com/software/BeautifulSoup/bs4/doc/>  
+中文文档：<http://beautifulsoup.readthedocs.io/zh_CN/latest/>  
 
 
 ## PyQuery
