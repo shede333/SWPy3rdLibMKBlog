@@ -58,6 +58,10 @@ Python通过prettytable模块将输出内容如表格方式整齐输出;
 A fast, extensible progress bar for Python and CLI;  
 <https://pypi.python.org/pypi/tqdm>
 
+## chart
+在终端 绘制 柱形图、散点图和直方图 等，0依赖;  
+<https://github.com/maxhumber/chart>
+
 ## termcolor
 终端的颜色控制
 
