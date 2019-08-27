@@ -42,10 +42,6 @@ Behold 提供了一个用于通过 print 语句进行上下文调试的工具包
 ## bashplotlib
 一个终端的绘图库，它允许你使用stdin绘制柱状图和散点图等。 
 
-## colorama 
-Cross-platform colored terminal text.   
-<https://pypi.python.org/pypi/colorama/>
-
 ## progressbar
 console输出进度条
 
@@ -64,6 +60,18 @@ A fast, extensible progress bar for Python and CLI;
 
 ## termcolor
 终端的颜色控制
+<https://pypi.org/project/termcolor/>
+
+## termcolor2
+A simple wrapper for termcolor  
+对**termcolor**的一个简单封装  
+<https://pypi.org/project/termcolor2/>
+
+## colorama  
+Python的Colorama模块，可以跨多终端，显示字体不同的颜色和背景，只需要导入colorama模块即可，不用再每次都像linux一样指定颜色。  
+Cross-platform colored terminal text.   
+<https://pypi.python.org/pypi/colorama/>  
+
 
 ## terminal_layout
 一个命令行ui布局工具 
