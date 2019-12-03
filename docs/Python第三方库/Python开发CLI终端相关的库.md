@@ -1,6 +1,19 @@
 
 
+## SWTermColor
+CLI终端输出彩色的文本, simple termcolor wrapper   
+<https://pypi.org/project/SWTermColor/>  
+源码：<https://github.com/shede333/SWTermColor>   
+![](./images/termnial.png)
 
+## termcolor
+终端的颜色控制
+<https://pypi.org/project/termcolor/>
+
+## termcolor2
+A simple wrapper for termcolor  
+对**termcolor**的一个简单封装  
+<https://pypi.org/project/termcolor2/>
 
 ## click
 很推荐，用Click编写Python命令行工具，pocoo出品(Flask也是这家出品的)，用于命令行接口，类似argparse ；  
@@ -57,15 +70,6 @@ A fast, extensible progress bar for Python and CLI;
 ## chart
 在终端 绘制 柱形图、散点图和直方图 等，0依赖;  
 <https://github.com/maxhumber/chart>
-
-## termcolor
-终端的颜色控制
-<https://pypi.org/project/termcolor/>
-
-## termcolor2
-A simple wrapper for termcolor  
-对**termcolor**的一个简单封装  
-<https://pypi.org/project/termcolor2/>
 
 ## colorama  
 Python的Colorama模块，可以跨多终端，显示字体不同的颜色和背景，只需要导入colorama模块即可，不用再每次都像linux一样指定颜色。  
